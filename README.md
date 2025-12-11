@@ -1,1 +1,1 @@
-# CPE487-Final-Project
+# VHDL-Pokemon-Demo
