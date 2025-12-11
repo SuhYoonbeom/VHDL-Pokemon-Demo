@@ -1,0 +1,507 @@
+
+*** Running vivado
+    with args -log pokemon.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source pokemon.tcl
+
+
+
+****** Vivado v2025.1 (64-bit)
+  **** SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
+  **** IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+  **** SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+  **** Start of session at: Thu Dec 11 18:28:18 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source pokemon.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental {C:/Users/Seongjun An/pokemon/pokemon.srcs/utils_1/imports/synth_1/clk_wiz_0.dcp}
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/Seongjun An/pokemon/pokemon.srcs/utils_1/imports/synth_1/clk_wiz_0.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top pokemon -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 21896
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1197.898 ; gain = 494.750
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'pokemon' [C:/Users/Seongjun An/pokemon/pokemon.srcs/sources_1/new/pokemon.vhd:26]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'C:/Users/Seongjun An/pokemon/pokemon.srcs/sources_1/new/clk_wiz_0.vhd:74' bound to instance 'u_clk' of component 'clk_wiz_0' [C:/Users/Seongjun An/pokemon/pokemon.srcs/sources_1/new/pokemon.vhd:235]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/Seongjun An/pokemon/pokemon.srcs/sources_1/new/clk_wiz_0.vhd:83]
+INFO: [Synth 8-3491] module 'clk_wiz_0_clk_wiz' declared at 'C:/Users/Seongjun An/pokemon/pokemon.srcs/sources_1/new/clk_wiz_0_clk_wiz.vhd:63' bound to instance 'U0' of component 'clk_wiz_0_clk_wiz' [C:/Users/Seongjun An/pokemon/pokemon.srcs/sources_1/new/clk_wiz_0.vhd:98]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0_clk_wiz' [C:/Users/Seongjun An/pokemon/pokemon.srcs/sources_1/new/clk_wiz_0_clk_wiz.vhd:72]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 10.125000 - type: double 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: double 
+	Parameter CLKOUT0_DIVIDE_F bound to: 25.250000 - type: double 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT0_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT4_CASCADE bound to: 0 - type: bool 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: double 
+	Parameter STARTUP_WAIT bound to: 0 - type: bool 
+INFO: [Synth 8-113] binding component instance 'mmcm_adv_inst' to cell 'MMCME2_ADV' [C:/Users/Seongjun An/pokemon/pokemon.srcs/sources_1/new/clk_wiz_0_clk_wiz.vhd:114]
+INFO: [Synth 8-113] binding component instance 'clkf_buf' to cell 'BUFG' [C:/Users/Seongjun An/pokemon/pokemon.srcs/sources_1/new/clk_wiz_0_clk_wiz.vhd:176]
+INFO: [Synth 8-113] binding component instance 'clkout1_buf' to cell 'BUFG' [C:/Users/Seongjun An/pokemon/pokemon.srcs/sources_1/new/clk_wiz_0_clk_wiz.vhd:183]
+INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0_clk_wiz' (0#1) [C:/Users/Seongjun An/pokemon/pokemon.srcs/sources_1/new/clk_wiz_0_clk_wiz.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0' (0#1) [C:/Users/Seongjun An/pokemon/pokemon.srcs/sources_1/new/clk_wiz_0.vhd:83]
+INFO: [Synth 8-3491] module 'vga_sync' declared at 'C:/Users/Seongjun An/pokemon/pokemon.srcs/sources_1/new/vga_sync.vhd:5' bound to instance 'u_vga' of component 'vga_sync' [C:/Users/Seongjun An/pokemon/pokemon.srcs/sources_1/new/pokemon.vhd:244]
+INFO: [Synth 8-638] synthesizing module 'vga_sync' [C:/Users/Seongjun An/pokemon/pokemon.srcs/sources_1/new/vga_sync.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'vga_sync' (0#1) [C:/Users/Seongjun An/pokemon/pokemon.srcs/sources_1/new/vga_sync.vhd:21]
+INFO: [Synth 8-3491] module 'leddec16' declared at 'C:/Users/Seongjun An/pokemon/pokemon.srcs/sources_1/new/leddec16.vhd:4' bound to instance 'u_seg' of component 'leddec16' [C:/Users/Seongjun An/pokemon/pokemon.srcs/sources_1/new/pokemon.vhd:273]
+INFO: [Synth 8-638] synthesizing module 'leddec16' [C:/Users/Seongjun An/pokemon/pokemon.srcs/sources_1/new/leddec16.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'leddec16' (0#1) [C:/Users/Seongjun An/pokemon/pokemon.srcs/sources_1/new/leddec16.vhd:12]
+INFO: [Synth 8-3491] module 'Intro' declared at 'C:/Users/Seongjun An/pokemon/pokemon.srcs/sources_1/new/Intro.vhd:5' bound to instance 'u_intro' of component 'Intro' [C:/Users/Seongjun An/pokemon/pokemon.srcs/sources_1/new/pokemon.vhd:285]
+INFO: [Synth 8-638] synthesizing module 'Intro' [C:/Users/Seongjun An/pokemon/pokemon.srcs/sources_1/new/Intro.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'Intro' (0#1) [C:/Users/Seongjun An/pokemon/pokemon.srcs/sources_1/new/Intro.vhd:18]
+INFO: [Synth 8-3491] module 'chooseTeam' declared at 'C:/Users/Seongjun An/pokemon/pokemon.srcs/sources_1/new/chooseTeam.vhd:12' bound to instance 'u_choose' of component 'chooseTeam' [C:/Users/Seongjun An/pokemon/pokemon.srcs/sources_1/new/pokemon.vhd:297]
+INFO: [Synth 8-638] synthesizing module 'chooseTeam' [C:/Users/Seongjun An/pokemon/pokemon.srcs/sources_1/new/chooseTeam.vhd:32]
+INFO: [Synth 8-226] default block is never used [C:/Users/Seongjun An/pokemon/pokemon.srcs/sources_1/new/garchomp.vhd:130]
+INFO: [Synth 8-226] default block is never used [C:/Users/Seongjun An/pokemon/pokemon.srcs/sources_1/new/bidoof.vhd:128]
+INFO: [Synth 8-256] done synthesizing module 'chooseTeam' (0#1) [C:/Users/Seongjun An/pokemon/pokemon.srcs/sources_1/new/chooseTeam.vhd:32]
+INFO: [Synth 8-3491] module 'opponent' declared at 'C:/Users/Seongjun An/pokemon/pokemon.srcs/sources_1/new/opponent.vhd:5' bound to instance 'u_opp' of component 'opponent' [C:/Users/Seongjun An/pokemon/pokemon.srcs/sources_1/new/pokemon.vhd:316]
+INFO: [Synth 8-638] synthesizing module 'opponent' [C:/Users/Seongjun An/pokemon/pokemon.srcs/sources_1/new/opponent.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'opponent' (0#1) [C:/Users/Seongjun An/pokemon/pokemon.srcs/sources_1/new/opponent.vhd:16]
+INFO: [Synth 8-3491] module 'battle' declared at 'C:/Users/Seongjun An/pokemon/pokemon.srcs/sources_1/new/battle.vhd:13' bound to instance 'u_battle' of component 'battle' [C:/Users/Seongjun An/pokemon/pokemon.srcs/sources_1/new/pokemon.vhd:328]
+INFO: [Synth 8-638] synthesizing module 'battle' [C:/Users/Seongjun An/pokemon/pokemon.srcs/sources_1/new/battle.vhd:40]
+INFO: [Synth 8-226] default block is never used [C:/Users/Seongjun An/pokemon/pokemon.srcs/sources_1/new/garchomp.vhd:130]
+INFO: [Synth 8-226] default block is never used [C:/Users/Seongjun An/pokemon/pokemon.srcs/sources_1/new/bidoof.vhd:128]
+INFO: [Synth 8-256] done synthesizing module 'battle' (0#1) [C:/Users/Seongjun An/pokemon/pokemon.srcs/sources_1/new/battle.vhd:40]
+INFO: [Synth 8-3491] module 'Outro' declared at 'C:/Users/Seongjun An/pokemon/pokemon.srcs/sources_1/new/Outro.vhd:5' bound to instance 'u_outro' of component 'Outro' [C:/Users/Seongjun An/pokemon/pokemon.srcs/sources_1/new/pokemon.vhd:354]
+INFO: [Synth 8-638] synthesizing module 'Outro' [C:/Users/Seongjun An/pokemon/pokemon.srcs/sources_1/new/Outro.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'Outro' (0#1) [C:/Users/Seongjun An/pokemon/pokemon.srcs/sources_1/new/Outro.vhd:20]
+INFO: [Synth 8-3491] module 'alphabet' declared at 'C:/Users/Seongjun An/pokemon/pokemon.srcs/sources_1/new/alphabet.vhd:5' bound to instance 'u_alpha' of component 'alphabet' [C:/Users/Seongjun An/pokemon/pokemon.srcs/sources_1/new/pokemon.vhd:371]
+INFO: [Synth 8-638] synthesizing module 'alphabet' [C:/Users/Seongjun An/pokemon/pokemon.srcs/sources_1/new/alphabet.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'alphabet' (0#1) [C:/Users/Seongjun An/pokemon/pokemon.srcs/sources_1/new/alphabet.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'pokemon' (0#1) [C:/Users/Seongjun An/pokemon/pokemon.srcs/sources_1/new/pokemon.vhd:26]
+WARNING: [Synth 8-7129] Port btnu in module battle is either unconnected or has no load
+WARNING: [Synth 8-7129] Port btnd in module battle is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1627.512 ; gain = 924.363
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1627.512 ; gain = 924.363
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1627.512 ; gain = 924.363
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.076 . Memory (MB): peak = 1627.512 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Seongjun An/pokemon/pokemon.srcs/constrs_1/new/pokemon.xdc]
+Finished Parsing XDC File [C:/Users/Seongjun An/pokemon/pokemon.srcs/constrs_1/new/pokemon.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Seongjun An/pokemon/pokemon.srcs/constrs_1/new/pokemon.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/pokemon_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/pokemon_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1685.703 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1685.703 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1685.703 ; gain = 982.555
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1685.703 ; gain = 982.555
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1685.703 ; gain = 982.555
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Preparing Guide Design
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Doing Graph Differ : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1685.703 ; gain = 982.555
+---------------------------------------------------------------------------------
+battle__GB4battle__GB3battle__GB2battle__GB1chooseTeam__GB1chooseTeam__GB0---------------------------------------------------------------------------------
+Finished Preparing Guide Design : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1685.703 ; gain = 982.555
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1685.703 ; gain = 982.555
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Mimic Skeleton from Reference
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Mimic Skeleton from Reference : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1685.703 ; gain = 982.555
+---------------------------------------------------------------------------------
+
+
+Incremental Synthesis Report Summary:
+
+1. Incremental synthesis run: yes
+
+   Stitch points used : changed
+
+
+2. Change Summary
+
+Report Incremental Modules: 
++------+----------------+------------+----------+----------+
+|      |Changed Modules |Replication |Instances |Changed % |
++------+----------------+------------+----------+----------+
+|1     |Intro           |           1|      9846|    7.0309|
+|2     |Outro           |           1|     10387|    7.4173|
++------+----------------+------------+----------+----------+
+
+
+   Full Design Size (number of cells) : 140038
+   Resynthesis Design Size (number of cells) : 47812
+   Resynth % : 34.1422,  Reuse % : 65.8578
+
+3. Reference Checkpoint Information
+
++--------------------------------------------------------------------------------------------------+
+| DCP Location:  | C:/Users/Seongjun An/pokemon/pokemon.srcs/utils_1/imports/synth_1/clk_wiz_0.dcp |
++--------------------------------------------------------------------------------------------------+
+
+
++--------------------------------+------------------------------+
+|         DCP Information        |             Value            |
++--------------------------------+------------------------------+
+| Vivado Version                 |                    v2025.1 |
+| DCP State                      |                              |
++--------------------------------+------------------------------+
+
+
+
+Report RTL Partitions: 
++------+------------------------+------------+----------+
+|      |RTL Partition           |Replication |Instances |
++------+------------------------+------------+----------+
+|1     |pokemon__GC0            |           1|     22710|
+|2     |battle__GB0             |           1|     25102|
+|3     |chooseTeam__GB0_#REUSE# |           1|         0|
+|4     |chooseTeam__GB1_#REUSE# |           1|         0|
+|5     |battle__GB1_#REUSE#     |           1|         0|
+|6     |battle__GB2_#REUSE#     |           1|         0|
+|7     |battle__GB3_#REUSE#     |           1|         0|
+|8     |battle__GB4_#REUSE#     |           1|         0|
++------+------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input   33 Bit       Adders := 3     
+	   3 Input   32 Bit       Adders := 11    
+	   2 Input   32 Bit       Adders := 15    
+	   2 Input   31 Bit       Adders := 14    
+	   2 Input   26 Bit       Adders := 3     
+	   2 Input   12 Bit       Adders := 9     
+	   2 Input   11 Bit       Adders := 2     
+	   2 Input   10 Bit       Adders := 3     
+	   2 Input    9 Bit       Adders := 3     
+	   2 Input    8 Bit       Adders := 5     
+	   2 Input    7 Bit       Adders := 5     
+	   2 Input    6 Bit       Adders := 3     
+	   2 Input    5 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 3     
+	   2 Input    3 Bit       Adders := 3     
+	   2 Input    2 Bit       Adders := 2     
++---Registers : 
+	               26 Bit    Registers := 3     
+	               11 Bit    Registers := 4     
+	                8 Bit    Registers := 14    
+	                4 Bit    Registers := 3     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 23    
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 19    
+	   2 Input   31 Bit        Muxes := 14    
+	   2 Input   26 Bit        Muxes := 3     
+	   4 Input   16 Bit        Muxes := 1     
+	   2 Input   12 Bit        Muxes := 2     
+	   2 Input   11 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 47    
+	   4 Input    8 Bit        Muxes := 7     
+	   3 Input    8 Bit        Muxes := 4     
+	   7 Input    7 Bit        Muxes := 18    
+	   2 Input    7 Bit        Muxes := 6     
+	   2 Input    6 Bit        Muxes := 18    
+	   7 Input    6 Bit        Muxes := 2     
+	   8 Input    6 Bit        Muxes := 12    
+	  18 Input    5 Bit        Muxes := 12    
+	   7 Input    5 Bit        Muxes := 25    
+	   2 Input    5 Bit        Muxes := 4     
+	   8 Input    5 Bit        Muxes := 7     
+	  15 Input    5 Bit        Muxes := 6     
+	   2 Input    4 Bit        Muxes := 243   
+	  12 Input    4 Bit        Muxes := 2     
+	   4 Input    4 Bit        Muxes := 6     
+	  13 Input    4 Bit        Muxes := 4     
+	   4 Input    3 Bit        Muxes := 2     
+	   2 Input    3 Bit        Muxes := 13    
+	   2 Input    2 Bit        Muxes := 21    
+	   5 Input    2 Bit        Muxes := 2     
+	   4 Input    2 Bit        Muxes := 1     
+	   4 Input    1 Bit        Muxes := 26    
+	   2 Input    1 Bit        Muxes := 79    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5587] ROM size for "FONT[0][0]0" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "FONT[0][0]0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "FONT[0][0]0" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "FONT[0][0]0" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "FONT[0][0]0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "FONT[0][0]0" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "FONT[0][0]0" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "FONT[0][0]0" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "FONT[0][0]0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "FONT[0][0]0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "FONT[0][0]0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "FONT[0][0]0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "FONT[0][0]0" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "FONT[0][0]0" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "FONT[0][0]0" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "FONT[0][0]0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "FONT[0][0]0" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "FONT[0][0]0" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "FONT[0][0]0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "FONT[0][0]0" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "FONT[0][0]0" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "FONT[0][0]0" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "FONT[0][0]0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "FONT[0][0]0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "FONT[0][0]0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "FONT[0][0]0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "FONT[0][0]0" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "FONT[0][0]0" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5544] ROM "winlose_char_idx" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "winlose_char_idx" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "u_seg/" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "p_0_out" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+WARNING: [Synth 8-3917] design pokemon__GC0 has port SEG7_anode[7] driven by constant 1
+WARNING: [Synth 8-3917] design pokemon__GC0 has port SEG7_anode[6] driven by constant 1
+WARNING: [Synth 8-3917] design pokemon__GC0 has port SEG7_anode[5] driven by constant 1
+WARNING: [Synth 8-3917] design pokemon__GC0 has port SEG7_anode[4] driven by constant 1
+INFO: [Synth 8-5544] ROM "base_atk8" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "base_spd8" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "base_spd8" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "base_atk8" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "base_hp8" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "base_hp8" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "base_hp8" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "base_hp8" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "base_hp8" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "base_hp8" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "base_hp8" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "base_hp8" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "g_out" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "pg0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "pr0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "pr0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "pg0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "pr0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "g_out" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "pg0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "pg0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "g_out" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "pg0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "pg0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "g_out" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "pg0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "pg0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_out" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "pb0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "pr0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "pr0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "pb0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "b_out" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "pb0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "pb0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_out" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "pb0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "pb0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "b_out" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "pb0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "pb0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "pr0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:55 . Memory (MB): peak = 1685.703 ; gain = 982.555
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++------------+---------------+---------------+----------------+
+|Module Name | RTL Object    | Depth x Width | Implemented As | 
++------------+---------------+---------------+----------------+
+|Intro       | SUB_TEXT[1]   | 32x7          | LUT            | 
+|Intro       | TITLE_TEXT[1] | 32x7          | LUT            | 
++------------+---------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Stitch Unchanged AreaOpt Partitions
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Stitch Unchanged AreaOpt Partitions : Time (s): cpu = 00:00:37 ; elapsed = 00:00:57 . Memory (MB): peak = 1685.703 ; gain = 982.555
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:44 ; elapsed = 00:01:04 . Memory (MB): peak = 1709.840 ; gain = 1006.691
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:51 ; elapsed = 00:01:10 . Memory (MB): peak = 1821.312 ; gain = 1118.164
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7077] IncrSyn: subsequent runs will still be incremental as the reference run was parallel and that data is reused
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:54 ; elapsed = 00:01:14 . Memory (MB): peak = 1823.441 ; gain = 1120.293
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Stitch Unchanged Partitions
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Stitch Unchanged Partitions : Time (s): cpu = 00:00:54 ; elapsed = 00:01:14 . Memory (MB): peak = 1823.441 ; gain = 1120.293
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:00 ; elapsed = 00:01:20 . Memory (MB): peak = 1931.012 ; gain = 1227.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:00 ; elapsed = 00:01:20 . Memory (MB): peak = 1931.012 ; gain = 1227.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:01 ; elapsed = 00:01:21 . Memory (MB): peak = 1931.012 ; gain = 1227.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:01 ; elapsed = 00:01:21 . Memory (MB): peak = 1931.012 ; gain = 1227.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:02 ; elapsed = 00:01:22 . Memory (MB): peak = 1931.012 ; gain = 1227.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:02 ; elapsed = 00:01:22 . Memory (MB): peak = 1931.012 ; gain = 1227.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |BUFG       |     2|
+|2     |CARRY4     |  2791|
+|3     |LUT1       |   500|
+|4     |LUT2       |  2985|
+|5     |LUT3       |  3150|
+|6     |LUT4       |  3692|
+|7     |LUT5       |  4367|
+|8     |LUT6       | 10518|
+|9     |MMCME2_ADV |     1|
+|10    |MUXF7      |  1608|
+|11    |MUXF8      |   471|
+|12    |FDRE       |   596|
+|13    |IBUF       |     6|
+|14    |OBUF       |    29|
++------+-----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:02 ; elapsed = 00:01:22 . Memory (MB): peak = 1931.012 ; gain = 1227.863
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:49 ; elapsed = 00:01:20 . Memory (MB): peak = 1931.012 ; gain = 1169.672
+Synthesis Optimization Complete : Time (s): cpu = 00:01:02 ; elapsed = 00:01:22 . Memory (MB): peak = 1931.012 ; gain = 1227.863
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.195 . Memory (MB): peak = 1931.012 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 4871 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1949.578 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 77e50a85
+INFO: [Common 17-83] Releasing license: Synthesis
+133 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:08 ; elapsed = 00:01:31 . Memory (MB): peak = 1949.578 ; gain = 1449.523
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.082 . Memory (MB): peak = 1949.578 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Seongjun An/pokemon/pokemon.runs/synth_1/pokemon.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file pokemon_utilization_synth.rpt -pb pokemon_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Dec 11 18:29:59 2025...
