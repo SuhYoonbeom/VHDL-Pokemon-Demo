@@ -14,3 +14,6 @@ Our project recreates a simplified version of a Pokémon battle using VHDL and r
 - BTNC: Select/Attack
 
 ## Required Hardware
+Digilent Nexys A7-100T FPGA Board
+
+![Nexys A7-100T FPGA Board](/Pictures/NexysA7.jpg)
