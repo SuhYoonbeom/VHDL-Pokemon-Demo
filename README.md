@@ -25,6 +25,7 @@ Our project recreates a simplified version of a Pokémon battle using VHDL and r
 - AMD Vivado™ Design Suite
 
 ## Visuals/Diagrams
+[Full video of demo](https://youtu.be/rZIYxnwkLVs)
 ### Battle
 ![](/Media/battle.gif)
 
