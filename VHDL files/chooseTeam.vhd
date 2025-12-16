@@ -31,9 +31,7 @@ end entity chooseTeam;
 
 architecture Behavioral of chooseTeam is
 
-    ----------------------------------------------------------------
-    -- Pokémon IDs (must match battle.vhd mapping)
-    ----------------------------------------------------------------
+    -- Pokemon IDs
     subtype poke_id_t is std_logic_vector(2 downto 0);
 
     constant P0 : poke_id_t := "000"; -- Pikachu
@@ -43,9 +41,7 @@ architecture Behavioral of chooseTeam is
     constant P4 : poke_id_t := "100"; -- Torterra
     constant P5 : poke_id_t := "101"; -- Bidoof
 
-    ----------------------------------------------------------------
-    -- Box layout (used by sprites and name labels)
-    ----------------------------------------------------------------
+    -- Boxes
     constant BOX_W : integer := 128;
     constant BOX_H : integer := 128;
     constant BOX_Y : integer := 150;  -- top of first row
@@ -54,24 +50,22 @@ architecture Behavioral of chooseTeam is
     constant GAP_Y : integer := 10;
     constant ROW1_TOP : integer := BOX_Y + (BOX_H + GAP_Y) + 25; -- second row
 
-    ----------------------------------------------------------------
-    -- Sprite positioning
-    ----------------------------------------------------------------
-    -- Pikachu (uses PIKA_W/PIKA_H from package)
-    constant PIKA_OFF_X : integer := (128 - PIKA_W) / 2; -- 8
-    constant PIKA_OFF_Y : integer := (128 - PIKA_H) / 2; -- 8
+    --Sprites
+    -- Pikachu
+    constant PIKA_OFF_X : integer := (128 - PIKA_W) / 2; 
+    constant PIKA_OFF_Y : integer := (128 - PIKA_H) / 2; 
 
-    -- Giratina (derive width/height from GIRATINA_FRONT)
+    -- Giratina
     constant GIR_W     : integer := GIRATINA_FRONT(0)'length;
     constant GIR_H     : integer := GIRATINA_FRONT'length;
     constant GIR_OFF_X : integer := (128 - GIR_W) / 2;
     constant GIR_OFF_Y : integer := (128 - GIR_H) / 2;
 
-    -- Garchomp (80x80)
+    -- Garchomp
     constant GARCH_W     : integer := 80;
     constant GARCH_H     : integer := 80;
-    constant GARCH_OFF_X : integer := (128 - GARCH_W) / 2;  -- 24
-    constant GARCH_OFF_Y : integer := (128 - GARCH_H) / 2;  -- 24
+    constant GARCH_OFF_X : integer := (128 - GARCH_W) / 2;  
+    constant GARCH_OFF_Y : integer := (128 - GARCH_H) / 2;  
 
     -- Empoleon
     constant EMP_OFF_X : integer := (128 - EMP_W) / 2;
@@ -85,9 +79,7 @@ architecture Behavioral of chooseTeam is
     constant TORT_OFF_X : integer := (128 - TORTERRA_W) / 2;
     constant TORT_OFF_Y : integer := (128 - TORTERRA_H) / 2;
 
-    ----------------------------------------------------------------
     -- 5x7 FONT
-    ----------------------------------------------------------------
     type char7x5_t is array(0 to 6) of std_logic_vector(4 downto 0);
 
     -- Letters we need: A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,R,T,U
@@ -351,12 +343,8 @@ architecture Behavioral of chooseTeam is
         end case;
     end function;
 
-    ----------------------------------------------------------------
-    -- Selection state
-    ----------------------------------------------------------------
-    -- 10 boxes total: indices 0..9 (5 per row × 2 rows)
-    -- 0..5 have Pokémon: Pikachu, Giratina, Empoleon, Garchomp, Torterra, Bidoof
-    -- 6..9 are empty/unselectable
+    -- Selecting Pokemon
+
     signal cursor_idx  : integer range 0 to 9 := 0;  -- highlighted box index
     signal sel_count   : integer range 0 to 3 := 0;  -- how many chosen (0..3)
     signal team0_reg   : poke_id_t := P0;

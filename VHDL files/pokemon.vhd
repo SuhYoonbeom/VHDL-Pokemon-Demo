@@ -16,10 +16,7 @@ entity pokemon is
         VGA_vsync   : out std_logic;
         VGA_red     : out std_logic_vector(3 downto 0);
         VGA_green   : out std_logic_vector(3 downto 0);
-        VGA_blue    : out std_logic_vector(3 downto 0);
-        -- Seven-seg
-        SEG7_seg    : out std_logic_vector(6 downto 0);
-        SEG7_anode  : out std_logic_vector(7 downto 0)
+        VGA_blue    : out std_logic_vector(3 downto 0)
     );
 end entity pokemon;
 
@@ -48,15 +45,6 @@ architecture Behavioral of pokemon is
             vsync     : out std_logic;
             pixel_row : out std_logic_vector(10 downto 0);
             pixel_col : out std_logic_vector(10 downto 0)
-        );
-    end component;
-
-    component leddec16
-        port (
-            dig   : in  std_logic_vector(2 downto 0);
-            data  : in  std_logic_vector(15 downto 0);
-            anode : out std_logic_vector(7 downto 0);
-            seg   : out std_logic_vector(6 downto 0)
         );
     end component;
 
@@ -198,10 +186,6 @@ architecture Behavioral of pokemon is
     signal outro_done       : std_logic := '0';
     signal outro_done_prev  : std_logic := '0';
 
-    -- 7-seg
-    signal seg_data  : std_logic_vector(15 downto 0) := (others => '0');
-    signal seg_digit : std_logic_vector(2 downto 0)  := "000";
-
     -- Game state
     type game_state_t is (ST_INTRO, ST_CHOOSE, ST_BATTLE, ST_OUTRO);
     signal game_state : game_state_t := ST_INTRO;
@@ -259,24 +243,6 @@ begin
     VGA_red   <= vga_r;
     VGA_green <= vga_g;
     VGA_blue  <= vga_b;
-
-    ----------------------------------------------------------------
-    -- 7-seg: digit multiplexer + decoder
-    ----------------------------------------------------------------
-    process(clk_pixel)
-    begin
-        if rising_edge(clk_pixel) then
-            seg_digit <= std_logic_vector(unsigned(seg_digit) + 1);
-        end if;
-    end process;
-
-    u_seg : leddec16
-        port map (
-            dig   => seg_digit,
-            data  => seg_data,
-            anode => SEG7_anode,
-            seg   => SEG7_seg
-        );
 
     ----------------------------------------------------------------
     -- Scene modules
@@ -421,7 +387,7 @@ begin
     end process;
 
     ----------------------------------------------------------------
-    -- Scene base color mux + 7-seg data
+    -- Scene base color mux
     ----------------------------------------------------------------
     process(game_state, intro_r, intro_g, intro_b,
             choose_r, choose_g, choose_b,
@@ -432,7 +398,6 @@ begin
         scene_base_r <= (others => '0');
         scene_base_g <= (others => '0');
         scene_base_b <= (others => '0');
-        seg_data     <= (others => '0');
 
         case game_state is
             when ST_INTRO =>
@@ -449,7 +414,6 @@ begin
                 scene_base_r <= battle_r;
                 scene_base_g <= battle_g;
                 scene_base_b <= battle_b;
-                seg_data     <= hp_data;
 
             when ST_OUTRO =>
                 scene_base_r <= outro_r;

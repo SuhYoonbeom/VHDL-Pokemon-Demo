@@ -46,11 +46,9 @@ architecture Behavioral of Intro is
     constant CHAR_F : char7x5_t := (
         "11111","10000","11110","10000","10000","10000","10000"
     );
-    -- NEW: I
     constant CHAR_I : char7x5_t := (
         "00100","00100","00100","00100","00100","00100","00100"
     );
-    -- NEW: K
     constant CHAR_K : char7x5_t := (
         "10001","10010","10100","11000","10100","10010","10001"
     );
