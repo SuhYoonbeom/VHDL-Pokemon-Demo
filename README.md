@@ -271,3 +271,14 @@ END vga_sync;
 ---
 
 ## Modifications
+Because we knew we wanted to make a game that used a display and user input, we started off using Lab 6 as a starting point for our project. We pulled `clk_wiz_0.vhd`, `clk_wiz_0_clk_wiz.vhd`, and `vga_sync.vhd` to use for our project. We made no modifications to these 3 files. 
+
+For our `pokemon.xdc` we copied the `pong.xdc` code from Lab 6. The only modification we made to this file was removing the physical pin assignments connected to the 7 segment displays. We did this because we knew we weren't going to display anything on them.
+
+The rest of our code was coded from scratch while using `bat_n_ball.vhd` and `pong.vhd` from Lab 6 as references. A majority of our code was also developed with the help of ChatGPT. We started out by creating different files for different "scenes" that the program would run through. After making the necessary modifications required for each scene, we then attached them to our top level file `pokemon.vhd`. For the Pokémon, we created a separate file for each which contained their sprite and color palette data. The sprites we used were based off the sprites from Pokémon Platinum and drawn by hand in google sheets. They were then converted into `.csv` files and then converted into VHDL using `csvConversion.py`. Keeping the Pokémon data in separate files allowed us to reduce clutter in our main files while maintaining convenience since we were able to directly call the packages whenever we needed.
+
+## Conclusion
+Seongjun: 
+Matthew:
+
+### Timeline
