@@ -32,4 +32,4 @@ Our project recreates a simplified version of a Pokémon battle using VHDL and r
 ![](/Media/diagram.png)
 
 ### FSM
-![](/Media/battle.gif)
+![](/Media/fsm.png)
