@@ -16,25 +16,25 @@ Our project recreates a simplified version of a Pokémon battle using VHDL and r
 - BTNR: Move cursor right
 - BTNC: Select/Attack
 
-## Required Hardware
+## Required Hardware/Software
 ### Digilent Nexys A7-100T FPGA Board
 
-![](/Media/NexysA7.jpg)
+<img src="/Media/NexysA7.jpg" width="500"/>
 
 ### Micro USB Cable
 
-![](/Media/Micro%20USB%20Cable.png)
+<img src="/Media/Micro%20USB%20Cable.png" width="500"/>
 
 ### VGA to HDMI Adapter
 
-![](/Media/VGAtoHDMI.jpg)
+<img src="/Media/VGAtoHDMI.jpg" width="500"/>
 
 ### HDMI Cable
 
-![](/Media/HDMI%20Cable.jpeg)
+<img src="/Media/HDMI%20Cable.jpeg" width="500"/>
 
 ### TV or Monitor with an HDMI input
 
-![](/Media/TV.png)
+<img src="/Media/TV.png" width="500"/>
 
 ### AMD Vivado™ Design Suite
