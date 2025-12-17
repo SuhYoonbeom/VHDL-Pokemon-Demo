@@ -14,7 +14,11 @@ Our project recreates a simplified version of a Pokémon battle using VHDL and r
 - BTND: Move cursor down
 - BTNL: Move cursor left
 - BTNR: Move cursor right
-- BTNC: Select/Attack
+- BTNC: Select
+
+**(In battle)**
+- BTNL/BTNR: Swap Pokémon
+- BTNC: Attack
 
 ## Required Hardware/Software
 - Digilent Nexys A7-100T FPGA Board
@@ -180,7 +184,7 @@ end entity;
 - `pixel_row` `pixel_col`: Vertical and horizontal pixel positioning on the display
 - `player_p0` `player_p1` `player_p2`: Player’s Pokémon IDs  
 - `enemy_p0` `enemy_p1` `enemy_p2`: Opponent’s Pokémon IDs
-- `btnu` `btnd` `btnl` `btnr` `btnc`: Buttons for navigation and selection/attack
+- `btnu` `btnd` `btnl` `btnr` `btnc`: Buttons for swapping Pokémon and attack
 
 **Outputs**
 - `red` `green` `blue`: Red, green, and blue color channels for VGA output
@@ -263,6 +267,7 @@ END vga_sync;
 - `pixel_clk`: Pixel clock (25 MHz)
 - `red_in` `green_in` `blue_in`: Red, green, and blue color values for the current pixel from the active scene  
 
+
 **Outputs**
 - `red_out` `green_out` `blue_out`: Red, green, and blue color values driven to the VGA connector  
 - `hsync` `vsync`: Horizontal and vertical synchronization signal for the display  
@@ -287,4 +292,6 @@ The rest of our code was coded from scratch while using `bat_n_ball.vhd` and `po
 **Week of 12/2:** Continued working on battle mechanics and translating complete sprites into VHDL  
 **Week of 12/9:** Finished battle mechanics and implemented sprites into final code
 
-There were a couple of difficulties we encountered while developing this project.
+While developing the Pokémon battle system in VHDL, the main challenges we encountered involved managing timing for battle logic and handling sprite overlap in the display system. In our implementation of turn-based combat, we needed to fine tune timings to make sure attacks were done in the correct order and that animations wouldn't trigger too early. Additionally, integrating our sprite system introduced complexity where sprites would overlap and the different scenes would unintentionally render on top of each other. We addressed this by defining clear rendering priorities, bounding-box checks, and scene-level enable signals so that only the correct sprites and backgrounds were active at any given time. This allowed us to have stable visuals and consistent battle behavior.
+
+If given more time, we would want to expand the battle system and make it more accurate by adding Pokémon type mechanics and a more diverse attack move system. Since the current version is more based on luck, implementing type advantages and resistances (such as Fire, Water, and Grass interactions) would add strategic depth by modifying damage calculations based on whether an attack is effective, super effective, or not very effective. We also want to introduce multiple attack moves per Pokémon, each with distinct power, accuracy, cooldowns, and visual effects, making it more accurate to the games.
