@@ -278,7 +278,13 @@ For our `pokemon.xdc` we copied the `pong.xdc` code from Lab 6. The only modific
 The rest of our code was coded from scratch while using `bat_n_ball.vhd` and `pong.vhd` from Lab 6 as references. A majority of our code was also developed with the help of ChatGPT. We started out by creating different files for different "scenes" that the program would run through. After making the necessary modifications required for each scene, we then attached them to our top level file `pokemon.vhd`. For the Pokémon, we created a separate file for each which contained their sprite and color palette data. The sprites we used were based off the sprites from Pokémon Platinum and drawn by hand in google sheets. They were then converted into `.csv` files and then converted into VHDL using `csvConversion.py`. Keeping the Pokémon data in separate files allowed us to reduce clutter in our main files while maintaining convenience since we were able to directly call the packages whenever we needed.
 
 ## Conclusion
-Seongjun: 
-Matthew:
+**Seongjun:** Worked on main code base such as battle logic and moving between scenes.  
+**Matthew:** Worked on visuals drawing sprites and bringing them into VHDL. Also worked on organizing the GitHub repository and the README.
 
 ### Timeline
+**Week of 11/18:** Started working on the overall project  
+**Week of 11/25:** Split tasks and worked on basic battle mechanics and displaying simple sprites  
+**Week of 12/2:** Continued working on battle mechanics and translating complete sprites into VHDL  
+**Week of 12/9:** Finished battle mechanics and implemented sprites into final code
+
+There were a couple of difficulties we encountered while developing this project.
